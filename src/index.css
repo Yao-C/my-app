@@ -1,50 +1,79 @@
-body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+html, body { height: 100vh; }
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --font: #5a5555;
+  --primary: #e20221;
+  --secondary: #23145f;
+  --b--light-gray: #ebebeb;
+  --bg-light-gray: #eee;
+  --green: #467211; /* for kamera versjon */
 }
 
-ol, ul {
-  padding-left: 30px;
+body { background-color: var(--white); }
+
+.w-max-240 {max-width: 240px;}
+
+.pt4-halv {padding-top: 3rem;}
+
+.mt3 { margin-top: 1rem; }
+
+a { text-decoration: none; color: var(--font); }
+
+ul {
+  list-style: none;
+  padding: 0; 
 }
 
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
+/* ---------------------------------- */
+/* Header */
+/* ---------------------------------- */
+
+header { 
+  max-height: 70px;
+  min-height: 70px;
+  background-color: var(--primary); 
+}
+#header-logo-white { height: 36px; }
+
+/* ---------------------------------- */
+/* SideBar */
+/* ---------------------------------- */
+
+.sidebar-left {
+  padding: 1rem;
+  padding-top: 3rem;
+  width: 240px;
+  background-color: #f6fffe; /* for testing */
 }
 
-.status {
-  margin-bottom: 10px;
+.sidebar-left li a { padding-left: 1.2rem; }
+
+.sidebar-line::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 208px;
+  background: var(--b--light-gray);
+  margin-top: 1rem;
 }
 
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
+/* ---------------------------------- */
+/* .main */
+/* ---------------------------------- */
+
+.main {
+  padding: 2rem;
+}
+
+/* ---------------------------------- */
+/* Footer */
+/* ---------------------------------- */
+
+footer {
+  padding: 0.5rem;
+  background: var(--bg-light-gray);
   text-align: center;
-  width: 34px;
-}
-
-.square:focus {
-  outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
-}
+} 
